@@ -20,6 +20,8 @@ A reconstructed operational trading support tool designed to simplify margin, sw
 - Multi-language support
 - Responsive layout
 
+Designed for operational support scenarios involving CFD, forex, metals, and leveraged trading products.
+
 ---
 
 ## Stop-out Calculation
