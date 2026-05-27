@@ -140,11 +140,11 @@ This reduced unnecessary navigation layers and improved direct access to operati
 
 ## Previous Homepage
 
-![Old Homepage](../screenshots/homepage-before/homepage-old.png)
+![Old Homepage](../screenshots/homepage-old.png)
 
 ## Redesigned Homepage
 
-![New Homepage](../screenshots/homepage-after/homepage-new.png)
+![New Homepage](../screenshots/homepage-new.png)
 
 ---
 
@@ -152,15 +152,15 @@ This reduced unnecessary navigation layers and improved direct access to operati
 
 ## Legacy Section Page
 
-![Legacy Section Page](../screenshots/navigation-before-after/section-old.png)
+![Legacy Section Page](../screenshots/section-old.png)
 
 ## Previous FAQ Category Structure
 
-![Old FAQ Navigation](../screenshots/navigation-before-after/faq-old.png)
+![Old FAQ Navigation](../screenshots/category-old.png)
 
 ## Updated Section-First Navigation
 
-![New FAQ Navigation](../screenshots/navigation-before-after/faq-new.png)
+![New FAQ Navigation](../screenshots/category-new.png)
 
 ---
 
@@ -168,7 +168,7 @@ This reduced unnecessary navigation layers and improved direct access to operati
 
 ## Guided Onboarding Flow
 
-![Onboarding Journey](../screenshots/onboarding/onboarding-journey.png)
+![Onboarding Journey](../screenshots/homepage-milestone.png)
 
 ---
 
