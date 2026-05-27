@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margin & Swap Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" data-i18n="eyebrow">Trading tools</p>
+            <h1 data-i18n="title">Margin & Swap Calculator</h1>
+          </div>
+          <div class="topbar-actions">
+            <label class="language-label" for="languageSelect" data-i18n="language">Language</label>
+            <select class="language-select" id="languageSelect" name="languageSelect">
+              <option value="en">EN</option>
+              <option value="zh">简中</option>
+            </select>
+            <button class="icon-button" id="resetButton" type="button" title="Reset inputs" aria-label="Reset inputs">
+              &#8635;
+            </button>
+          </div>
+        </header>
+
+        <section class="calculator-grid">
+          <form class="panel input-panel" id="calculatorForm">
+            <div class="field">
+              <label for="calculatorMode" data-i18n="calculatorMode">Calculator mode</label>
+              <select id="calculatorMode" name="calculatorMode">
+                <option value="marginSwap" data-i18n="modeMarginSwap">Margin & swap</option>
+                <option value="stopOut" data-i18n="modeStopOut">Stop-out price</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="productSearch" data-i18n="searchProduct">Search product</label>
+              <input
+                id="productSearch"
+                name="productSearch"
+                type="search"
+                placeholder="Search symbol, name, or category"
+                data-i18n-placeholder="searchPlaceholder"
+                autocomplete="off"
+              />
+              <p class="field-note" id="productSearchCount"></p>
+            </div>
+
+            <div class="field">
+              <label for="product" data-i18n="product">Product</label>
+              <select id="product" name="product"></select>
+            </div>
+
+            <div class="field is-hidden" id="marginRateField">
+              <label for="marginRate" id="marginRateLabel">Margin currency rate</label>
+              <input id="marginRate" name="marginRate" type="number" min="0" step="0.00001" />
+              <p class="field-note" id="marginRateNote"></p>
+            </div>
+
+            <div class="segmented" role="group" aria-label="Trade side">
+              <input type="radio" id="buySide" name="side" value="buy" checked />
+              <label for="buySide" data-i18n="buy">Buy</label>
+              <input type="radio" id="sellSide" name="side" value="sell" />
+              <label for="sellSide" data-i18n="sell">Sell</label>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="lots" data-i18n="lots">Lots</label>
+                <input id="lots" name="lots" type="number" min="0" step="0.01" value="1" />
+              </div>
+              <div class="field">
+                <label for="leverage" data-i18n="leverage">Leverage</label>
+                <select id="leverage" name="leverage">
+                  <option value="500">1:500</option>
+                  <option value="400">1:400</option>
+                  <option value="200">1:200</option>
+                  <option value="100">1:100</option>
+                  <option value="50">1:50</option>
+                  <option value="20">1:20</option>
+                  <option value="10">1:10</option>
+                  <option value="5">1:5</option>
+                </select>
+                <p class="field-note" id="leverageNote"></p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="price" data-i18n="openPrice">Open price</label>
+                <input id="price" name="price" type="number" min="0" step="0.00001" value="2350.5" />
+              </div>
+              <div class="field swap-field">
+                <label for="days" data-i18n="holdingDays">Holding days</label>
+                <input id="days" name="days" type="number" min="1" step="1" value="1" />
+              </div>
+            </div>
+
+            <div class="field-row swap-field">
+              <div class="field">
+                <label for="longSwap" data-i18n="buySwap">Buy swap</label>
+                <input id="longSwap" name="longSwap" type="number" step="0.01" />
+              </div>
+              <div class="field">
+                <label for="shortSwap" data-i18n="sellSwap">Sell swap</label>
+                <input id="shortSwap" name="shortSwap" type="number" step="0.01" />
+              </div>
+            </div>
+
+            <div class="field-row is-hidden" id="stopOutFields">
+              <div class="field">
+                <label for="equity" data-i18n="equity">Account equity</label>
+                <input id="equity" name="equity" type="number" min="0" step="0.01" value="1000" />
+              </div>
+              <div class="field">
+                <label for="stopOutRatio" data-i18n="stopOutRatio">Stop-out ratio (%)</label>
+                <input id="stopOutRatio" name="stopOutRatio" type="number" min="0" step="0.01" value="30" />
+              </div>
+            </div>
+          </form>
+
+          <section class="panel results-panel" aria-live="polite">
+            <div class="metric">
+              <span data-i18n="pointValue">Point value</span>
+              <strong id="pointValueResult">-</strong>
+            </div>
+            <div class="metric">
+              <span data-i18n="requiredMargin">Required margin</span>
+              <strong id="marginResult">-</strong>
+            </div>
+            <div class="metric swap-metric">
+              <span data-i18n="dailySwap">Daily swap</span>
+              <strong id="dailySwapResult">-</strong>
+            </div>
+            <div class="metric swap-metric">
+              <span data-i18n="totalSwap">Total swap</span>
+              <strong id="totalSwapResult">-</strong>
+            </div>
+            <div class="metric is-hidden" id="stopOutMetric">
+              <span data-i18n="stopOutPrice">Stop-out price</span>
+              <strong id="stopOutPriceResult">-</strong>
+            </div>
+            <p class="conversion-note" id="conversionNote"></p>
+          </section>
+        </section>
+
+        <section class="details-grid">
+          <section class="panel">
+            <div class="section-heading">
+              <h2 data-i18n="formulaBreakdown">Formula Breakdown</h2>
+            </div>
+            <div class="breakdown" id="breakdown"></div>
+          </section>
+
+          <section class="panel">
+            <div class="section-heading">
+              <h2 data-i18n="productSpec">Product Spec</h2>
+            </div>
+            <dl class="spec-list" id="specList"></dl>
+          </section>
+        </section>
+
+        <section class="panel reply-panel">
+          <div class="section-heading">
+            <h2 data-i18n="replyFormats">Reply Formats</h2>
+          </div>
+          <div class="reply-tool">
+            <div class="field-row">
+              <div class="field">
+                <label for="replyTemplate" data-i18n="replyTemplate">Template</label>
+                <select id="replyTemplate" name="replyTemplate"></select>
+              </div>
+              <div class="field">
+                <label for="replyLanguageSelect" data-i18n="replyLanguage">Reply language</label>
+                <select id="replyLanguageSelect" name="replyLanguageSelect">
+                  <option value="en">EN</option>
+                  <option value="zh">简中</option>
+                </select>
+              </div>
+              <div class="field reply-action-field">
+                <button class="copy-button reply-copy-button" id="copyReplyButton" type="button" data-i18n="copyReply">
+                  Copy reply
+                </button>
+              </div>
+            </div>
+            <textarea id="replyText" class="reply-text" spellcheck="false"></textarea>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
