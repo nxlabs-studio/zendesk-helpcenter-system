@@ -28,11 +28,7 @@ Operational trading support tool designed for internal workflow demonstrations i
 - Formula breakdown
 - Multi-language operational replies
 
-Location:
-
-```plaintext
-support-tools/margin-swap-calculator
-```
+[View Project →](./support-tools/margin-swap-calculator)
 
 ---
 
@@ -48,11 +44,7 @@ A reconstructed UX case study documenting:
 - Onboarding improvements
 - Discoverability optimization
 
-Location:
-
-```plaintext
-docs/navigation-restructure-case-study.md
-```
+[View Documentation →](./docs/navigation-restructure-case-study.md)
 
 ---
 
