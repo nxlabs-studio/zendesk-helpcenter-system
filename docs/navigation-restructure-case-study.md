@@ -148,15 +148,27 @@ This reduced unnecessary navigation layers and improved direct access to operati
 
 ---
 
-# FAQ Navigation Restructure
+# Navigation Restructure
 
-## Previous FAQ Navigation
+## Legacy Section Page
+
+![Legacy Section Page](../screenshots/navigation-before-after/section-old.png)
+
+## Previous FAQ Category Structure
 
 ![Old FAQ Navigation](../screenshots/navigation-before-after/faq-old.png)
 
 ## Updated Section-First Navigation
 
 ![New FAQ Navigation](../screenshots/navigation-before-after/faq-new.png)
+
+---
+
+# Onboarding Experience
+
+## Guided Onboarding Flow
+
+![Onboarding Journey](../screenshots/onboarding/onboarding-journey.png)
 
 ---
 
