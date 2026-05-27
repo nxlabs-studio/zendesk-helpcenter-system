@@ -42,7 +42,7 @@ Designed for operational support scenarios involving CFD, forex, metals, and lev
 
 ---
 
-## Multi-language Support
+## Multi-language Interface
 
 ![Language](language.png)
 
@@ -64,3 +64,4 @@ The focus is on:
 ## Notes
 
 This is a reconstructed public demonstration project and does not contain proprietary backend systems or internal infrastructure.
+This project is intended for portfolio and workflow demonstration purposes only.
