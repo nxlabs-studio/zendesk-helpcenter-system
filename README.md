@@ -16,6 +16,13 @@ A collection of reconstructed Help Center UX concepts, operational tooling exper
 
 ---
 
+## Project Areas
+
+- [Homepage Layout System](./homepage-layout)
+- [Article Grouping System](./article-grouping)
+- [Documentation Hub](./docs)
+- [Margin & Swap Calculator](./support-tools/margin-swap-calculator)
+
 ## Included Projects
 
 ### Margin & Swap Calculator
