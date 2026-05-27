@@ -2,6 +2,17 @@
 
 A reconstructed operational trading support tool designed to simplify margin, swap, and stop-out estimation workflows.
 
+- This tool is intended for internal operational workflow demonstrations and support-side calculation assistance.
+- Auto-reply examples are reconstructed workflow samples for demonstration purposes and are not client-facing production templates.
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+- Responsive frontend design
+- Lightweight client-side calculation logic
+
 ---
 
 ## Overview
