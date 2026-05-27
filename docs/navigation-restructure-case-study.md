@@ -2,191 +2,118 @@
 
 ## Overview
 
-This case study documents a reconstructed Help Center UX modernization project focused on improving navigation efficiency, onboarding accessibility, and article discoverability within a Zendesk Guide environment.
+This case study documents a reconstructed Zendesk Guide restructuring project focused on improving article discoverability, reducing navigation depth, and modernizing Help Center usability.
 
-The redesign focused on reducing unnecessary navigation depth and simplifying how users access operational content.
-
----
-
-# Objectives
-
-The project aimed to:
-
-- reduce navigation friction
-- simplify article discovery
-- modernize the homepage structure
-- improve onboarding visibility
-- reduce category-layer dependency
-- improve operational accessibility for support-related articles
+The project explores section-first navigation patterns, homepage restructuring, onboarding improvements, and operational content accessibility.
 
 ---
 
-# Original Structure
+# Goals
 
-The original Help Center structure relied heavily on category-based navigation.
+The restructuring focused on:
 
-Typical flow:
-
-```plaintext
-Homepage
-→ Category
-→ Section
-→ Article
-```
-
-This created:
-- excessive navigation depth
-- inconsistent onboarding visibility
-- reduced article discoverability
-- unnecessary clicks before reaching operational content
+- reducing unnecessary navigation depth
+- improving article discoverability
+- simplifying category hierarchy
+- improving onboarding visibility
+- modernizing homepage presentation
+- supporting scalable multilingual growth
 
 ---
 
-# Restructured Navigation Flow
+# Previous Navigation Structure
 
-The redesigned structure shifted toward section-first navigation.
+The legacy structure relied heavily on deep FAQ navigation and long article lists.
 
-Updated flow:
+Common issues included:
 
-```plaintext
-Homepage
-→ Section
-→ Article
-```
-
-This reduced navigation depth and improved direct access to operational guides.
-
----
-
-# Homepage Modernization
-
-The homepage was redesigned to improve:
-- onboarding visibility
-- article categorization clarity
-- visual consistency
-- operational accessibility
-
-Key improvements included:
-- simplified category presentation
-- redesigned article cards
-- onboarding journey section
-- recommended article sections
-- cleaner spacing and hierarchy
-- modernized visual structure
-
----
-
-# Navigation Improvements
-
-The redesign introduced:
-- section-first entry points
-- reduced click depth
-- improved article grouping
-- clearer onboarding paths
-- improved FAQ discoverability
-- operational content prioritization
-
----
-
-# UX Focus Areas
-
-The restructuring focused heavily on:
-- usability
-- discoverability
-- onboarding clarity
-- workflow efficiency
-- responsive layout behavior
-- operational readability
-
----
-
-# Technical Areas Involved
-
-This project involved:
-- Zendesk Guide customization
-- HTML restructuring
-- CSS layout redesign
-- frontend UX refinement
-- article grouping logic
-- navigation restructuring
-- documentation organization
-
----
-
-# Before & After Examples
-
-## Previous FAQ Structure
-
-```plaintext
-Homepage
-→ FAQ Category
-→ Registration Section
-→ Article
-```
-
-## Updated FAQ Structure
-
-```plaintext
-Homepage
-→ Registration Section
-→ Article
-```
-
-This reduced unnecessary navigation layers and improved direct access to operational documentation.
-
----
-
-# Homepage Comparison
+- excessive click depth
+- weak onboarding visibility
+- difficult content discovery
+- inconsistent category grouping
+- limited visual hierarchy
 
 ## Previous Homepage
 
-![Old Homepage](../screenshots/homepage-old.png)
+![Old Homepage](../screenshots/navigation-case-study/homepage-old.png)
+
+## Previous FAQ Navigation
+
+![Old FAQ Navigation](../screenshots/navigation-case-study/category-old.png)
+
+---
+
+# Redesigned Navigation Approach
+
+The updated structure introduced a section-first browsing experience with clearer content grouping and stronger visual hierarchy.
+
+Key improvements included:
+
+- homepage category cards
+- section-level article previews
+- onboarding milestone blocks
+- reduced navigation friction
+- improved scanning behavior
+- cleaner responsive layout
 
 ## Redesigned Homepage
 
-![New Homepage](../screenshots/homepage-new.png)
+![New Homepage](../screenshots/navigation-case-study/homepage-new.png)
+
+## Updated Section Navigation
+
+![New FAQ Navigation](../screenshots/navigation-case-study/category-new.png)
 
 ---
 
-# Navigation Restructure
+# Onboarding Improvements
 
-## Legacy Section Page
+A dedicated onboarding milestone component was introduced to guide new users through the account setup journey.
 
-![Legacy Section Page](../screenshots/section-old.png)
+The onboarding flow focused on:
 
-## Previous FAQ Category Structure
-
-![Old FAQ Navigation](../screenshots/category-old.png)
-
-## Updated Section-First Navigation
-
-![New FAQ Navigation](../screenshots/category-new.png)
-
----
-
-# Onboarding Experience
+1. registration
+2. verification
+3. trading account setup
+4. first trade guidance
 
 ## Guided Onboarding Flow
 
-![Onboarding Journey](../screenshots/homepage-milestone.png)
+![Onboarding Journey](../screenshots/navigation-case-study/homepage-milestone.png)
 
 ---
 
-# Operational Impact
+# UX Considerations
 
-The restructuring improved:
-- onboarding accessibility
-- support workflow efficiency
-- article visibility
-- navigation consistency
-- operational readability
+The redesign emphasized:
 
-The redesigned structure also better supports multilingual documentation environments and future Help Center scalability.
+- readability
+- reduced cognitive load
+- responsive spacing
+- cleaner visual grouping
+- operational clarity
+- scalable component reuse
+
+The layout was designed to remain lightweight while supporting future expansion and multilingual content growth.
+
+---
+
+# Technical Notes
+
+The reconstructed implementation explores concepts involving:
+
+- Zendesk Guide customization
+- custom homepage layouts
+- section grouping logic
+- frontend templating
+- responsive CSS layouts
+- operational content structure
+- multilingual content handling
 
 ---
 
 # Notes
 
-This document represents a reconstructed public case study based on Help Center UX modernization concepts and operational workflow design.
+This is a reconstructed portfolio case study intended for documentation and demonstration purposes.
 
-No proprietary systems, internal business logic, or client-sensitive infrastructure are included.
+No proprietary backend systems, client information, or internal infrastructure are included.
