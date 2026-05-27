@@ -2,6 +2,14 @@
 
 A reconstructed operational trading support tool designed to simplify margin, swap, and stop-out estimation workflows.
 
+---
+
+## Overview
+
+![Overview](overview.png)
+
+---
+
 ## Features
 
 - Margin calculation
@@ -11,6 +19,32 @@ A reconstructed operational trading support tool designed to simplify margin, sw
 - Auto-reply generation
 - Multi-language support
 - Responsive layout
+
+---
+
+## Stop-out Calculation
+
+![Stop-out](stop-out.png)
+
+---
+
+## Formula Breakdown
+
+![Formula Breakdown](formula-breakdown.png)
+
+---
+
+## Auto-reply Generation
+
+![Auto Reply](reply.png)
+
+---
+
+## Multi-language Support
+
+![Language](language.png)
+
+---
 
 ## Purpose
 
@@ -22,6 +56,8 @@ The focus is on:
 - operational clarity
 - multilingual structure
 - AI-assisted development workflows
+
+---
 
 ## Notes
 
